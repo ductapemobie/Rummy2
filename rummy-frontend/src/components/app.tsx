@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./header";
-import SigninPage from "./signin-page";
+import SigninPage from "./account-management/signin-page";
 import store from '../store/store';
 import { Provider } from 'react-redux';
-import SingoutPage from "./signout-page";
-import RegisterPage from "./register";
-import DeleteAccountPage from "./delete-account";
-import ChangePasswordPage from "./change-password-page";
+import SingoutPage from "./account-management/signout-page";
+import RegisterPage from "./account-management/register";
+import DeleteAccountPage from "./account-management/delete-account";
+import ChangePasswordPage from "./account-management/change-password-page";
 
 export default function App(){
     return <BrowserRouter>

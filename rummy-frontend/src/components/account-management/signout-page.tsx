@@ -1,12 +1,13 @@
 import { Button, Card, CardActions, CardContent } from "@mui/material"
 import { useDispatch, useSelector } from "react-redux";
-import { LoginState } from "../store/store";
+import { LoginState } from "../../store/store";
 import Typography from '@mui/material/Typography';
-
+import { useNavigate } from "react-router-dom";
 
 export default function SingoutPage(){
 
     const dispatch = useDispatch()
+    const navigate = useNavigate();
 
     let loginState:LoginState = {
         token:useSelector((state:LoginState) => state.token)
@@ -20,6 +21,7 @@ export default function SingoutPage(){
 
     function logoutClicked(){
         dispatch({type:"logout", token:""});
+        navigate('/');
     }
 
     const logoutCard = <div className='centerElements'>
