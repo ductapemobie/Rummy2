@@ -15,6 +15,7 @@ export default function Header(){
         <li><Link to={'/signout'}>Sign Out</Link></li>
         <li><Link to={'/updatepassword'}>Update Password</Link></li>
         <li><Link to={'/deleteaccount'}>Delete Account</Link></li>
+        <li><Link to={'/games'}>View Games</Link></li>
     </ul>
 
     return <>{loginState.token?inHeader:outHeader}</>
